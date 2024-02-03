@@ -1,0 +1,22 @@
+{
+  "name": "tana-link-backerup",
+  "module": "./src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "scripts": {
+    "drizzle:generate": "drizzle-kit generate:sqlite --out ./drizzle/migrations --breakpoints --schema=./drizzle/schema.ts",
+    "drizzle:migrate": "bun ./drizzle/migrate"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.4.3",
+    "drizzle-orm": "^0.29.3",
+    "hono": "^3.12.10",
+    "nanoid": "^5.0.5"
+  }
+}
