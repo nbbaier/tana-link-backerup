@@ -7,6 +7,7 @@
     "drizzle-kit": "^0.20.14"
   },
   "scripts": {
+    "dev": "bun --watch src/index.ts",
     "drizzle:generate": "drizzle-kit generate:sqlite --out ./drizzle/migrations --breakpoints --schema=./drizzle/schema.ts",
     "drizzle:migrate": "bun ./drizzle/migrate"
   },
