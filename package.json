@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "drizzle:generate": "drizzle-kit generate:sqlite --out ./drizzle/migrations --breakpoints --schema=./drizzle/schema.ts",
-    "drizzle:migrate": "bun ./drizzle/migrate"
+    "drizzle:migrate": "bun ./drizzle/migrate",
+    "deploy": "wrangler deploy",
+    "start": "wrangler dev"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -18,6 +20,9 @@
     "@libsql/client": "^0.4.3",
     "drizzle-orm": "^0.29.3",
     "hono": "^3.12.10",
-    "nanoid": "^5.0.5"
+    "nanoid": "^5.0.5",
+    "@cloudflare/workers-types": "^4.20240129.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
   }
 }
