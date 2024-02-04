@@ -1,10 +1,9 @@
-import { buildDbClient } from "./client";
-import { links } from "../drizzle/schema";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
-import { insertLink, type NewLink, type Link } from "./operations";
 import { nanoid } from "nanoid";
+import { buildDbClient } from "./client";
+import { insertLink, type Link } from "./operations";
 import { parseNode } from "./parse";
 
 const app = new Hono();
